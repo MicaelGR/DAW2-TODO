@@ -1,0 +1,4 @@
+<mat-list>
+  <app-todo-item *ngFor="let todo of todoClosedList" [todoItem]="todo" (changeState)="todoPending($event)">
+  </app-todo-item>
+</mat-list>

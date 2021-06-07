@@ -1,0 +1,6 @@
+<mat-form-field>
+  <input matInput [formControl]="todoTitle" type="text" required="true" (keyup.enter)="addTodo()">
+  <button mat-button matSuffix mat-icon-button aria-label="Añadir" (click)="addTodo()">
+    <mat-icon>done</mat-icon>
+  </button>
+</mat-form-field>

@@ -1,0 +1,6 @@
+<div class="container">
+  <mat-button-toggle-group [value]="_activeValue" [formControl]="state" name="fontStyle" aria-label="Font Style">
+    <mat-button-toggle value="Pendiente" (change)="onChange($event)">Pendiente</mat-button-toggle>
+    <mat-button-toggle value="En proceso" (change)="onChange($event)">En proceso</mat-button-toggle>
+  </mat-button-toggle-group>
+</div>

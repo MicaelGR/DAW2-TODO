@@ -1,0 +1,31 @@
+<div fxLayout="column" fxLayoutAlign="start stretch" class="cards">
+  <div fxLayout="row" fxLayoutAlign="center">
+    <div fxFlex="90%" fxFlex.md="50%" fxFlex.gt-md="30%">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Todo List</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <app-todo-filter></app-todo-filter>
+          <app-todo-list></app-todo-list>
+        </mat-card-content>
+      </mat-card>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Añadir Todo</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <app-todo-input></app-todo-input>
+        </mat-card-content>
+      </mat-card>
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>Todos completados</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+          <app-todo-closed-list></app-todo-closed-list>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>

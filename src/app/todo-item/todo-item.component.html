@@ -1,0 +1,29 @@
+<div class="todoItems">
+  <mat-list>
+    <mat-list-item checkboxPosition="before">
+      <mat-checkbox class="mat-checkbox-class" color="primary" [checked]="completed" (change)="onChange()">
+      </mat-checkbox>
+      <div class="todoTitle">
+        <span *ngIf="!updating">
+          {{ todoItem.title }}
+        </span>
+        <mat-form-field *ngIf="updating" class="editTodo">
+          <input matInput [placeholder]="todoItem.title" [formControl]="todoTitle" type="text" required="true"
+            (keyup.enter)="updateTodo()">
+        </mat-form-field>
+      </div>
+      <button class="todOptions" *ngIf="!completed" color="primary" mat-button mat-icon-button aria-label="Edit"
+        (click)="updateBtn()">
+        <mat-icon>mode_edit_outline</mat-icon>
+      </button>
+      <button class="todOptions" *ngIf="!completed" mat-button mat-icon-button aria-label="Delete"
+        (click)="deleteTodo()">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <mat-select class="selectState" *ngIf="!completed" [(value)]="todoItem.state">
+        <mat-option value="{{ states[0] }}">{{ states[0] }}</mat-option>
+        <mat-option value="{{ states[1] }}">{{ states[1] }}</mat-option>
+      </mat-select>
+    </mat-list-item>
+  </mat-list>
+</div>
